@@ -18,15 +18,13 @@ const redditUtil = {
 	createObject: function(points, title, url) {
 		var result = null;
 
-		logger.info("Attempt create object with params", { points: points, title: title, url: url });
-
 		try {
 			result = {
 				points: parseInt(points),
 				title: title,
 				url: redditUtil.checkAndValidateUrl(url)
 			};
-			logger.info("Object created", { points: points, title: title, url: url });
+
 		} catch (ex) {
 			logger.warn("Invalid params when create object", { points: points, title: title, url: url });
 		}
