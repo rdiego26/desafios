@@ -41,6 +41,28 @@ describe("Reddit Utils", function() {
 
 	});
 
+	it("should gets true when using valid parameters on validateParams method", function(done) {
+
+		const _result = redditUtils.validateParams(10, "title", "/r/lplp");
+
+		assert.isTrue(_result);
+		done();
+
+	});
+
+	it("should gets false when using invalid parameters on validateParams method", function(done) {
+
+		const _resultOne = redditUtils.validateParams(null, "title", "/r/lplp");
+		const _resultTwo = redditUtils.validateParams(null, null, null);
+		const _resultThree = redditUtils.validateParams(undefined, undefined, []);
+
+		assert.isFalse(_resultOne);
+		assert.isFalse(_resultTwo);
+		assert.isFalse(_resultThree);
+		done();
+
+	});
+
 	it("should create object with valid parameters using createObject method", function(done) {
 
 		const _result = redditUtils.createObject(10, "title", "/r/lplp");
