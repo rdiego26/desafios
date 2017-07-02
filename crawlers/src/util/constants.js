@@ -4,7 +4,8 @@ const constants = {
 
 	reddit: {
 		sitePrefix: "http://www.reddit.com",
-		searchPrefix: "/r"
+		searchPrefix: "/r",
+		minimalPointsToShow: 5000
 	}
 
 };
