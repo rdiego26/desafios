@@ -1,0 +1,23 @@
+{
+  "name": "crawlers",
+  "version": "0.0.1",
+  "description": "Reddit Crawler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdiego26/desafios.git"
+  },
+  "keywords": [
+    "Reddit",
+    "Crawler"
+  ],
+  "author": "Diego Ramos <rdiego26@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "crawler": "1.0.5",
+    "winston": "2.3.1"
+  }
+}
