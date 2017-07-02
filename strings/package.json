@@ -6,8 +6,7 @@
   "scripts": {
     "execute": "node src/index.js",
     "test": "mocha --recursive",
-    "cover": "istanbul cover _mocha",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+    "cover": "istanbul cover _mocha"
   },
   "preferGlobal": true,
   "bin": {
