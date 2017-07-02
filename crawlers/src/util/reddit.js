@@ -11,6 +11,10 @@ const redditUtil = {
 			(constants.reddit.sitePrefix + strURL) : strURL;
 	},
 
+	mountURL: function(term) {
+		return constants.reddit.sitePrefix + "/r/" + term;
+	},
+
 	createObject: function(points, title, url) {
 		var result = null;
 
