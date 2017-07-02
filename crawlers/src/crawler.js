@@ -43,8 +43,9 @@ const crawler = {
 			}
 		});
 
-		arrayTerms.each(function(item) {
-			instance.queue(item);
+		arrayTerms.forEach(function(item) {
+			const _url = redditUtil.mountURL(item);
+			instance.queue(_url);
 		});
 
 		instance.on('drain', function() {
