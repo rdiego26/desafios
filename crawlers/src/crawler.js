@@ -3,6 +3,7 @@
 const path = require("path");
 const Crawler = require("crawler");
 const logger = require("winston");
+const constants = require(path.resolve("src/util/constants.js"));
 const redditUtil = require(path.resolve("src/util/reddit.js"));
 
 const crawler = {
@@ -33,7 +34,7 @@ const crawler = {
 						const _url = $(ele).children("div.entry").children("div.top-matter").children("p.title").children("a").attr("href");
 						const _obj = redditUtil.createObject(_points, _title, _url);
 
-						if(_obj) {
+						if(_obj && _obj.points >= constants.reddit.minimalPointsToShow) {
 							crawler.objs.push(_obj);
 						}
 
